@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akrivia Logout Timer</title>
+  <link rel="stylesheet" href="./logouttimer.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card in-time">
+      <div class="card-body">
+        <div class="time-info">
+          <img src="./run forward.gif" alt="Running forward" class="card-img" />
+          <div class="time-label">In-Time</div>
+        </div>
+        <div class="time-value" id="InTime">--</div>
+      </div>
+    </div>
+    
+    <div class="card break-time">
+      <div class="card-body">
+        <div class="time-info">
+          <img src="./mug-tea.gif" alt="Coffee mug" class="card-img" />
+          <div class="time-label">Break Time</div>
+        </div>
+        <div class="time-value" id="BreakTime">--</div>
+      </div>
+    </div>
+    
+    <div class="card logout-time">
+      <div class="card-body">
+        <div class="time-info">
+          <img src="./run forward.gif" alt="Running backward" class="card-img flipped" />
+          <div class="time-label">Logout-Time</div>
+        </div>
+        <div class="time-value" id="LogoutTime">--</div>
+      </div>
+    </div>
+    
+    <div class="card remaining-time">
+      <div class="card-body">
+        <div class="time-info">
+          <div class="analog-clock">
+            <div class="clock-face">
+              <div class="hour-mark hour-12">12</div>
+              <div class="hour-mark hour-3">3</div>
+              <div class="hour-mark hour-6">6</div>
+              <div class="hour-mark hour-9">9</div>
+              <div class="hour-hand"></div>
+              <div class="minute-hand"></div>
+              <div class="second-hand"></div>
+              <div class="center-dot"></div>
+            </div>
+          </div>
+          <div class="time-label">Remaining Time</div>
+        </div>
+        <div class="time-value" id="RemainingTime">--</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time-up Alert Modal -->
+  <div id="timeUpAlert" class="time-up-alert hidden">
+    <div class="alert-modal">
+      <div class="alert-emoji">🙌</div>
+      <div class="alert-message">Pora rey Po.....</div>
+      <button id="dismissAlert" class="dismiss-btn">Dismiss</button>
+    </div>
+  </div>
+
+  <button id="refreshBtn" title="Refresh"><i class="fas fa-sync-alt"></i></button>
+
+  <script src="./main.js"></script>
+</body>
+</html>
